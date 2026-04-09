@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 // eslint-disable-next-line import/no-unresolved
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import dat from 'dat.gui';
 
 import fragment from './shaders/fragment.glsl';
 import vertex from './shaders/vertex.glsl';
@@ -57,8 +56,6 @@ export default class Sketch {
     this.settings = {
       progress: 0,
     }
-    this.gui = new dat.GUI();
-    this.gui.add(this.settings, 'progress', 0, 1, 0.01);
   }
 
   setLights() {
