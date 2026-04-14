@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./styles/base.css">
 </head>
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  #canvas {
-    width: 100vw;
-    height: 100vh;
-  }
-  canvas {
-    display: block;
-  }
-</style>
+
 <body>
-  <canvas id="canvas"></canvas>
-  <script type="module" src="app.js"></script>
+  <canvas id="webgl"></canvas>
+  <section class="section">
+    <div class="button-list">
+      <button type="button" class="button js-button" data-angle="90">Vertical</button>
+      <button type="button" class="button js-button" data-angle="17">Angled</button>
+      <button type="button" class="button js-button" data-angle="0">Horizontal</button>
+    </div>
+
+    <div class="image ja-image-target">
+      <img src="./images/threejs-paper-unroll-image-01.jpg" alt="">
+    </div>
+
+  </section>
+  <script type="module" src="./scripts/App.ts"></script>
 </body>
+
 </html>
