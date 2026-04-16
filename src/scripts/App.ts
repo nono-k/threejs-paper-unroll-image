@@ -40,7 +40,8 @@ export class App extends Three {
 
   private async loader() {
     const loader = new THREE.TextureLoader();
-    const _texture = await loader.loadAsync('./images/threejs-paper-unroll-image-01.jpg');
+    const source = this.imageTarget.querySelector('img')?.getAttribute('src');
+    const _texture = await loader.loadAsync(source!);
     return _texture;
   }
 
